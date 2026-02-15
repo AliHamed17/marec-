@@ -1,0 +1,2 @@
+config,tag_mode,lambda1,beta,alpha,hr@10,ndcg@10,hr@25,ndcg@25,hr@10_std,ndcg@10_std,hr@25_std,ndcg@25_std
+top3_tags,tags_full,10,1,1,0.5912433109801531,0.6206033266190458,0.5317262382603931,0.5608329274513699,0.0,0.0,0.0,0.0

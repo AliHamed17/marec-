@@ -1,0 +1,36 @@
+{
+  "data_dir": "hetrec_data",
+  "binarize_threshold": 3.0,
+  "min_user_kcore": 5,
+  "min_item_kcore": 5,
+  "n_splits": 10,
+  "cold_frac": 0.2,
+  "base_seed": 42,
+  "min_feature_count": 2,
+  "tag_mode": "tags_train_only",
+  "leakage_safe": true,
+  "default_shrinkage": 20.0,
+  "per_feature_shrinkage": null,
+  "cross_pairs": [["actors", "directors"], ["actors", "genres"], ["directors", "genres"]],
+  "topk": null,
+  "topk_features": null,
+  "feature_configs": {
+    "base9": ["genres", "actors", "directors", "countries", "loc1", "loc2", "loc3", "years", "locations"],
+    "top3": ["actors", "directors", "genres"],
+    "top3_tags_safe": ["actors", "directors", "genres", "tags"]
+  },
+  "hp_grid": {
+    "lambda1": [0.1, 1, 10, 100],
+    "beta": [1, 10, 100, 500],
+    "alpha": [0.1, 1, 10, 100]
+  },
+  "weight_method": "regression",
+  "weight_kwargs": {},
+  "dr_percentile": 10,
+  "eval_ks": [10, 25],
+  "bootstrap_n": 500,
+  "bootstrap_frac": 0.2,
+  "tune_splits": [0],
+  "output_dir": "results/leakage_safe",
+  "sanity_mode": false
+}

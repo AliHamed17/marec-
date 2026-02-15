@@ -1,0 +1,2 @@
+config,tag_mode,lambda1,beta,alpha,hr@10,ndcg@10,hr@25,ndcg@25,hr@10_std,ndcg@10_std,hr@25_std,ndcg@25_std
+top3_tags,tags_train_users,10,1,1,0.5534562758246969,0.5930767860007147,0.4811895740631988,0.520451492004589,0.0,0.0,0.0,0.0

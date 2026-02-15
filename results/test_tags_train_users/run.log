@@ -1,0 +1,66 @@
+[14:24:55] Loading dataset...
+[14:25:25] Generating 1 cold-start splits...
+[14:25:25] Running verification checks...
+[14:25:26] 
+============================================================
+[14:25:26] Config: top3_tags — features: ['actors', 'directors', 'genres', 'tags']
+[14:25:26] ============================================================
+[14:25:26]   Features will be rebuilt per split (tag_mode=tags_train_users requires per-split rebuilding)
+[14:25:26]   HP tuning on splits [0]...
+[14:25:26]     Rebuilding features for split (tag_mode=tags_train_users)...
+[14:26:26]       Tags matrix: shape=(7433, 3951), nnz=31602
+[14:26:26]       genres: (7433, 19), nonzeros=16063
+[14:26:27]       actors: (7433, 29536), nonzeros=130889
+[14:26:27]       directors: (7433, 1290), nonzeros=5759
+[14:26:27]       countries: (7433, 47), nonzeros=7415
+[14:26:27]       loc1: (7433, 143), nonzeros=9499
+[14:26:27]       loc2: (7433, 659), nonzeros=13329
+[14:26:27]       loc3: (7433, 2426), nonzeros=20377
+[14:26:27]       locations: (7433, 6499), nonzeros=60212
+[14:26:27]       years: (7433, 1), nonzeros=7432
+[14:26:27]       tags: (7433, 3951), nonzeros=31602
+[14:27:36]   Best HP: lambda1=10, beta=1, alpha=1 (130.2s)
+[14:27:36]   Full 1-split evaluation...
+[14:27:36]     Rebuilding features for split (tag_mode=tags_train_users)...
+[14:28:34]       Tags matrix: shape=(7433, 3951), nnz=31602
+[14:28:34]       genres: (7433, 19), nonzeros=16063
+[14:28:35]       actors: (7433, 29536), nonzeros=130889
+[14:28:35]       directors: (7433, 1290), nonzeros=5759
+[14:28:35]       countries: (7433, 47), nonzeros=7415
+[14:28:35]       loc1: (7433, 143), nonzeros=9499
+[14:28:35]       loc2: (7433, 659), nonzeros=13329
+[14:28:35]       loc3: (7433, 2426), nonzeros=20377
+[14:28:35]       locations: (7433, 6499), nonzeros=60212
+[14:28:35]       years: (7433, 1), nonzeros=7432
+[14:28:35]       tags: (7433, 3951), nonzeros=31602
+[14:29:40]   hr@10: 0.5535 ± 0.0000
+[14:29:40]   hr@25: 0.4812 ± 0.0000
+[14:29:40]   ndcg@10: 0.5931 ± 0.0000
+[14:29:40]   ndcg@25: 0.5205 ± 0.0000
+[14:29:40]   (124.1s)
+[14:29:40] 
+BEST CONFIG: top3_tags
+[14:29:40]   hr@10: 0.5535
+[14:29:40]   ndcg@10: 0.5931
+[14:29:40]   hr@25: 0.4812
+[14:29:40]   ndcg@25: 0.5205
+[14:29:40] 
+Statistical comparisons (best vs others):
+[14:29:40] 
+Bootstrap CIs for top3_tags:
+[14:29:40]     Rebuilding features for split (tag_mode=tags_train_users)...
+[14:30:39]       Tags matrix: shape=(7433, 3951), nnz=31602
+[14:30:39]       genres: (7433, 19), nonzeros=16063
+[14:30:39]       actors: (7433, 29536), nonzeros=130889
+[14:30:39]       directors: (7433, 1290), nonzeros=5759
+[14:30:39]       countries: (7433, 47), nonzeros=7415
+[14:30:39]       loc1: (7433, 143), nonzeros=9499
+[14:30:39]       loc2: (7433, 659), nonzeros=13329
+[14:30:39]       loc3: (7433, 2426), nonzeros=20377
+[14:30:40]       locations: (7433, 6499), nonzeros=60212
+[14:30:40]       years: (7433, 1), nonzeros=7432
+[14:30:40]       tags: (7433, 3951), nonzeros=31602
+[14:33:07]   hr@10: 0.5531 [95% CI: 0.5284 — 0.5790]
+[14:33:07]   ndcg@10: 0.5929 [95% CI: 0.5677 — 0.6204]
+[14:33:07]   hr@25: 0.4808 [95% CI: 0.4597 — 0.5026]
+[14:33:07]   ndcg@25: 0.5202 [95% CI: 0.4990 — 0.5433]

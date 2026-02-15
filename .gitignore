@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Environment
+.venv/
+venv/
+env/
+
+# Large Data Files (>100MB)
+*.zip
+hetrec2011-movielens-2k-v2/
+*.dat
+
+# Keep results!
+!results/

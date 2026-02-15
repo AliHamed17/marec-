@@ -1,0 +1,2 @@
+config,tag_mode,mode,n_entries,n_unique_tags,n_items_with_tags,avg_tags_per_item,n_features
+top3_tags,tags_train_users,tags_train_users,46947,8918,5364,8.752237136465324,3951

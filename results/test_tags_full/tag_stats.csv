@@ -1,0 +1,2 @@
+config,tag_mode,mode,n_entries,n_unique_tags,n_items_with_tags,avg_tags_per_item,n_features
+top3_tags,tags_full,tags_full,49795,5290,6165,8.077047850770478,5178

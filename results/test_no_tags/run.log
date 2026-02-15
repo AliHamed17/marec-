@@ -1,0 +1,49 @@
+[14:18:30] Loading dataset...
+[14:18:57] Generating 1 cold-start splits...
+[14:18:58] Running verification checks...
+[14:18:59] 
+============================================================
+[14:18:59] Config: top3 — features: ['actors', 'directors', 'genres']
+[14:18:59] ============================================================
+[14:18:59]   Building features globally (tag_mode=no_tags)...
+[14:19:51]     genres: (7433, 19), nonzeros=16063
+[14:19:52]     actors: (7433, 29536), nonzeros=130889
+[14:19:52]     directors: (7433, 1290), nonzeros=5759
+[14:19:52]     countries: (7433, 47), nonzeros=7415
+[14:19:52]     loc1: (7433, 143), nonzeros=9499
+[14:19:52]     loc2: (7433, 659), nonzeros=13329
+[14:19:52]     loc3: (7433, 2426), nonzeros=20377
+[14:19:52]     locations: (7433, 6499), nonzeros=60212
+[14:19:52]     years: (7433, 1), nonzeros=7432
+[14:20:10]   HP tuning on splits [0]...
+[14:20:57]   Best HP: lambda1=10, beta=1, alpha=1 (47.1s)
+[14:20:57]   Full 1-split evaluation...
+[14:21:43]   hr@10: 0.2991 ± 0.0000
+[14:21:43]   hr@25: 0.2869 ± 0.0000
+[14:21:43]   ndcg@10: 0.3152 ± 0.0000
+[14:21:43]   ndcg@25: 0.2993 ± 0.0000
+[14:21:43]   (45.3s)
+[14:21:43] 
+BEST CONFIG: top3
+[14:21:43]   hr@10: 0.2991
+[14:21:43]   ndcg@10: 0.3152
+[14:21:43]   hr@25: 0.2869
+[14:21:43]   ndcg@25: 0.2993
+[14:21:43] 
+Statistical comparisons (best vs others):
+[14:21:43] 
+Bootstrap CIs for top3:
+[14:21:43]     Rebuilding features for split (tag_mode=no_tags)...
+[14:22:33]       genres: (7433, 19), nonzeros=16063
+[14:22:33]       actors: (7433, 29536), nonzeros=130889
+[14:22:33]       directors: (7433, 1290), nonzeros=5759
+[14:22:33]       countries: (7433, 47), nonzeros=7415
+[14:22:33]       loc1: (7433, 143), nonzeros=9499
+[14:22:33]       loc2: (7433, 659), nonzeros=13329
+[14:22:33]       loc3: (7433, 2426), nonzeros=20377
+[14:22:34]       locations: (7433, 6499), nonzeros=60212
+[14:22:34]       years: (7433, 1), nonzeros=7432
+[14:24:55]   hr@10: 0.2989 [95% CI: 0.2848 — 0.3156]
+[14:24:55]   ndcg@10: 0.3152 [95% CI: 0.3001 — 0.3333]
+[14:24:55]   hr@25: 0.2865 [95% CI: 0.2727 — 0.3014]
+[14:24:55]   ndcg@25: 0.2991 [95% CI: 0.2856 — 0.3144]

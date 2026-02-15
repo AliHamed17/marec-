@@ -1,0 +1,53 @@
+[14:33:07] Loading dataset...
+[14:33:34] Generating 1 cold-start splits...
+[14:33:35] Running verification checks...
+[14:33:36] 
+============================================================
+[14:33:36] Config: top3_tags — features: ['actors', 'directors', 'genres', 'tags']
+[14:33:36] ============================================================
+[14:33:36]   Building features globally (tag_mode=tags_full)...
+[14:34:34]     Tags matrix: shape=(7433, 5178), nnz=49683
+[14:34:34]     genres: (7433, 19), nonzeros=16063
+[14:34:35]     actors: (7433, 29536), nonzeros=130889
+[14:34:35]     directors: (7433, 1290), nonzeros=5759
+[14:34:35]     countries: (7433, 47), nonzeros=7415
+[14:34:35]     loc1: (7433, 143), nonzeros=9499
+[14:34:35]     loc2: (7433, 659), nonzeros=13329
+[14:34:35]     loc3: (7433, 2426), nonzeros=20377
+[14:34:35]     locations: (7433, 6499), nonzeros=60212
+[14:34:35]     years: (7433, 1), nonzeros=7432
+[14:34:36]     tags: (7433, 5178), nonzeros=49683
+[14:34:54]   HP tuning on splits [0]...
+[14:35:43]   Best HP: lambda1=10, beta=1, alpha=1 (48.9s)
+[14:35:43]   Full 1-split evaluation...
+[14:36:32]   hr@10: 0.5912 ± 0.0000
+[14:36:32]   hr@25: 0.5317 ± 0.0000
+[14:36:32]   ndcg@10: 0.6206 ± 0.0000
+[14:36:32]   ndcg@25: 0.5608 ± 0.0000
+[14:36:32]   (49.2s)
+[14:36:33] 
+BEST CONFIG: top3_tags
+[14:36:33]   hr@10: 0.5912
+[14:36:33]   ndcg@10: 0.6206
+[14:36:33]   hr@25: 0.5317
+[14:36:33]   ndcg@25: 0.5608
+[14:36:33] 
+Statistical comparisons (best vs others):
+[14:36:33] 
+Bootstrap CIs for top3_tags:
+[14:36:33]     Rebuilding features for split (tag_mode=tags_full)...
+[14:37:30]       Tags matrix: shape=(7433, 5178), nnz=49683
+[14:37:30]       genres: (7433, 19), nonzeros=16063
+[14:37:31]       actors: (7433, 29536), nonzeros=130889
+[14:37:31]       directors: (7433, 1290), nonzeros=5759
+[14:37:31]       countries: (7433, 47), nonzeros=7415
+[14:37:31]       loc1: (7433, 143), nonzeros=9499
+[14:37:31]       loc2: (7433, 659), nonzeros=13329
+[14:37:31]       loc3: (7433, 2426), nonzeros=20377
+[14:37:31]       locations: (7433, 6499), nonzeros=60212
+[14:37:31]       years: (7433, 1), nonzeros=7432
+[14:37:31]       tags: (7433, 5178), nonzeros=49683
+[14:39:56]   hr@10: 0.5911 [95% CI: 0.5675 — 0.6183]
+[14:39:56]   ndcg@10: 0.6206 [95% CI: 0.5965 — 0.6478]
+[14:39:56]   hr@25: 0.5313 [95% CI: 0.5105 — 0.5537]
+[14:39:56]   ndcg@25: 0.5606 [95% CI: 0.5393 — 0.5844]
