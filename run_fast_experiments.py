@@ -500,7 +500,7 @@ for n in ["top3_no_tags","top3_tags_safe","top3_tags_full","tags_shuffled"]:
     ax.plot(range(len(vals)), vals, "o-", label=label, markersize=6)
 ax.set_xlabel("Split"); ax.set_ylabel("HR@10"); ax.set_title("Per-Split Stability")
 ax.legend(); ax.grid(True, alpha=0.3); plt.tight_layout()
-plt.savefig("per_split.png",dpi=150,bbox_inches="tight"); plt.show()
+plt.savefig("per_split.png",dpi=150,bbox_inches="tight"); # plt.show()
 
 # Tag mode comparison (side by side)
 fig, axes = plt.subplots(1,2,figsize=(14,6))
@@ -516,7 +516,7 @@ for ai, metric in enumerate(["hr@10","ndcg@10"]):
     ax.set_ylabel(metric); ax.set_title(f"{metric} by Tag Mode")
     ax.set_ylim(0,max(ms)*1.2)
     for b,v in zip(bars,ms): ax.text(b.get_x()+b.get_width()/2,b.get_height()+0.005,f"{v:.3f}",ha="center",va="bottom",fontsize=9)
-plt.tight_layout(); plt.savefig("tag_modes.png",dpi=150,bbox_inches="tight"); plt.show()
+plt.tight_layout(); plt.savefig("tag_modes.png",dpi=150,bbox_inches="tight"); # plt.show()
 
 out = Path("results/fast_experiments"); out.mkdir(parents=True, exist_ok=True)
 rows_csv = []
